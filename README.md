@@ -1,7 +1,7 @@
 # Selection-Workflow
-Scripts for preparing bed files, compara alignment download, and selection test
+The scripts in this repository prepare the necessary files to test for positive selection in promoter regions of genes using the HyPhy batch file [nonCodingSelection.bf](https://github.com/ofedrigo/TestForPositiveSelection) written by Olivier Fedrigo. 
 
-The scripts in this repository prepare necessary files to test for positive selection in promoter regions of genes using the HyPhy batch file [nonCodingSelection.bf](https://github.com/ofedrigo/TestForPositiveSelection) written by Olivier Fedrigo.
+We use the scripts in this workflow to investigate selection in promoter regions of genes in primates (human, chimpanzee, and macaque), and perfom our analysis starting with a list of genes for which promoters will be tested and genomic data downloaded from the UCSC Table Browser (.gtf and .bed files). However, these scripts can be used generally to test for selection in non-coding regions of interest, or can be run individually to download alignment data from compara or for pre-processing data before selection testing.
 
 ## ID2bed&#46;sh
 ___
@@ -102,10 +102,10 @@ ID.cat.2.3.clean|   Aligned fasta format. One file per neutral region per promot
 
 ## selection&#46;sh
 ___
-This script runs the [nonCodingSelection.bf](https://github.com/ofedrigo/TestForPositiveSelection) test for positive selection with HYPHYMP for all promoter/ neutral alignments. 
+This script runs the [nonCodingSelection.bf](https://github.com/ofedrigo/TestForPositiveSelection) test for positive selection with HyPhy for all promoter/ neutral alignments. 
 
 ### Detailed Summary
-To use this script, all promoter and neutral alignments should be in the same directory along with this script, a newick tree, and the file nonCodingSelection&#46;bf. This script creates a list of gene IDs that have both promoter and neutral alignments which is used to read files into HYPHY for processing. Parameter settings in this script for running the selection test are:
+To use this script, all promoter and neutral alignments should be in the same directory along with this script, a newick tree, and the file nonCodingSelection&#46;bf. This script creates a list of gene IDs that have both promoter and neutral alignments which is used to read files into HyPhy for processing through the HYPHYMP binary. Parameter settings in this script for running the selection test are:
 
 Parameter | Setting
 ----------|--------
@@ -132,4 +132,4 @@ ID.out |   Report from selection test
 ### Dependencies
 bash shell  
 unix utilities  
-HYPHYMP  
+HyPhy

@@ -39,7 +39,7 @@ ___
 This script takes a bed file as input, downloads sequence alignments from the compara API 6 primate EPO dataset, and outputs one file per record. The unique values in the fourth column of the bed file will be used to name each output file (eg "ID.msa").
 
 ### Detailed Summary
-fetchAlignment&#46;pl should be used to collect alignments for promoter regions that will be tested for selection and for neutral regions associated with those promoters. Alignments are interleaved in ClustalW format and contain sequence alignment for all primates in the compara API 6 primate EPO dataset. Output files are use gene IDs as root names to link neutral alignments with appropriate promoter alignments. Promoter and neutral alignments should be kept in separate directories because downstream processing of these files is handled differently for promoter and neutral alignments.
+fetchAlignment&#46;pl should be used to collect alignments for promoter regions that will be tested for selection and for neutral regions associated with those promoters. Alignments are interleaved in ClustalW format and contain sequence alignment for all primates in the compara API 6 primate EPO dataset. Output files use gene IDs as root names to link neutral alignments with appropriate promoter alignments. Promoter and neutral alignments should be kept in separate directories because downstream processing of these files is handled differently for promoter and neutral alignments.
 
 ### Input Files
 Filename |			Format
